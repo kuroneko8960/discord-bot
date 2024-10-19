@@ -15,7 +15,7 @@
 ## インストール
 
 > [!NOTE]
-> python 3.11以降が実行できる環境が必要になります。
+> python 3.13.0以降が実行できる環境が必要になります。
 
 1. このリポジトリをClone
 2. 仮想環境を作成
@@ -43,3 +43,19 @@ python -m app.main
 
 > [!TIP]
 > デーモン化は行ってないので必要の場合は別途、自身で対応してください。
+
+## テストの実行
+
+```
+pytest
+```
+
+## Git hookの登録について
+
+push時にpytestが実行できるように、pre-commitを導入しています。
+
+以下のコマンドでGit hookの登録ができます
+
+```bash
+pre-commit install -t pre-push
+```
