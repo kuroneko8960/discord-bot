@@ -1,0 +1,33 @@
+name: discord-bot
+
+services:
+  app:
+    container_name: discord-bot-app
+    build:
+      context: ..
+      dockerfile: ./docker/app/Dockerfile
+    volumes:
+      - ../app:/app/app
+
+  db:
+    container_name: discord-bot-db
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: discord_bot
+      MYSQL_USER: discord_bot
+      MYSQL_PASSWORD: discord_bot
+      TZ: Asia/Tokyo
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - mysql-data-volume:/var/lib/mysql
+
+volumes:
+  mysql-data-volume:
+    name: discord-bot-mysql-data
+    driver: local
+
+
+

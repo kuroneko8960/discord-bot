@@ -59,3 +59,30 @@ push時にpytestが実行できるように、pre-commitを導入しています
 ```bash
 pre-commit install -t pre-push
 ```
+
+## Dockerによる実行
+
+Dockerコンテナを利用してbotを立ち上げることができます。
+
+### 事前準備
+
+1. `.env.example` をコピー
+```sh
+cp .env.example docker.env
+```
+2. `docker.env` の DISCORD_BOT_TOKEN の値を書き換え
+3. ビルドを行う
+```sh
+docker compose -f ./docker/docker-compose.yaml build
+```
+
+> [!NOTE]
+> ./docker以下のファイル や requirements.txt、または docker.env を変更した場合は、
+> 再度ビルドを行う必要があります。
+
+### Dockerコンテナの実行
+
+```sh
+docker compose -f ./docker/docker-compose.yaml up -d
+```
+
