@@ -3,6 +3,7 @@
 #
 import os
 
+from app.feature.simple.presentation.simple_command import register_simple_commands
 from dotenv import load_dotenv
 
 from app.feature.ping.presentation.ping_command import register_ping_command
@@ -24,6 +25,7 @@ def main():
 
     # コマンド登録
     register_ping_command(bot)
+    register_simple_commands(bot)
 
     # Botを起動
     bot_suite.boot(token)
