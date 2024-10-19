@@ -5,7 +5,7 @@ repos:
         name: test
         entry: pytest -v -s test
         stages:
-          - push
+          - pre-push
         language: system
         pass_filenames: false
         always_run: true
