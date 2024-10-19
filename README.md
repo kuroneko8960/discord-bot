@@ -41,11 +41,21 @@ DISCORD_BOT_TOKEN=<enter your discord bot token>
 python -m app.main
 ```
 
+> [!TIP]
+> デーモン化は行ってないので必要の場合は別途、自身で対応してください。
+
 ## テストの実行
 
 ```
 pytest
 ```
 
-> [!TIP]
-> デーモン化は行ってないので必要の場合は別途、自身で対応してください。
+## Git hookの登録について
+
+push時にpytestが実行できるように、pre-commitを導入しています。
+
+以下のコマンドでGit hookの登録ができます
+
+```bash
+pre-commit install -t pre-push
+```
