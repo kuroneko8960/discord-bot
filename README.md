@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ```
 cp .env.example .env
 ```
-5. `.env`の中にDiscord BotのTokenを入力します
+5. `.env`の中にDiscord BotのTokenを入力
 ```.env
 DISCORD_BOT_TOKEN=<enter your discord bot token>
 ```
@@ -42,4 +42,4 @@ python -m app.main
 ```
 
 > [!TIP]
-> デーモン化は行ってないので必要の場合は別途、自身で対応してください
+> デーモン化は行ってないので必要の場合は別途、自身で対応してください。
