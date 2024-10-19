@@ -15,7 +15,7 @@
 ## インストール
 
 > [!NOTE]
-> python 3.11以降が実行できる環境が必要になります。
+> python 3.13.0以降が実行できる環境が必要になります。
 
 1. このリポジトリをClone
 2. 仮想環境を作成
@@ -39,6 +39,12 @@ DISCORD_BOT_TOKEN=<enter your discord bot token>
 
 ```
 python -m app.main
+```
+
+## テストの実行
+
+```
+pytest
 ```
 
 > [!TIP]
