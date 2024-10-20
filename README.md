@@ -7,9 +7,12 @@
 ## Feature
 
 - :white_check_mark: 実装済み
-  - ping
+  - `!ping`
+  - `!godfield` - ゴッドフィールドのURLを取得
+  - `!yahtzee [room-name]` - ヨットゲームのURLを取得
 - :wrench: 実装予定
-  -  TODO管理
+  - TODO管理
+  - タイマー
   - ダイスロール
 
 ## インストール
