@@ -10,6 +10,7 @@
   - `!ping`
   - `!godfield` - ゴッドフィールドのURLを取得
   - `!yahtzee [room-name]` - ヨットゲームのURLを取得
+  - `!roll` - 0-99のダイスロールを実行
 - :wrench: 実装予定
   - TODO管理
   - タイマー
